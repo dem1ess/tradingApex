@@ -218,7 +218,7 @@ const TradingViewWidget = () => {
 		let socket = null
 
 		const connectAndSubscribe = () => {
-			socket = io('https://api.apexfinance.io:8000/prices', {
+			socket = io('/prices', {
 				query: { symbol: selectedSymbol },
 			})
 
