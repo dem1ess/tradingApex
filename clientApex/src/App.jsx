@@ -92,7 +92,7 @@ function App() {
 
 	// Set up Socket.IO connection to receive price updates
 	useEffect(() => {
-		const socket = io('http://localhost:8000/allPrices')
+		const socket = io('/allPrices')
 
 		socket.on('connect', () => {
 			dispatch(setStatus('connected'))
@@ -222,8 +222,6 @@ function App() {
 								</PrivateRoute>
 							}
 						/>
-
-						{/* Добавляем обработку несуществующих маршрутов */}
 						<Route path='*' element={<Navigate to='/profile' replace />} />
 					</Routes>
 					<ToastContainer />
@@ -234,7 +232,7 @@ function App() {
 }
 
 const AuthProvider = ({ children }) => {
-	useAuthRedirect() // Обработка авторизации
+	useAuthRedirect()
 
 	return children
 }
