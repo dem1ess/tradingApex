@@ -1,0 +1,9 @@
+.content {
+	margin-left: 86px; /* Отступ для ПК */
+}
+
+@media (max-width: 1024px) {
+	.content {
+		margin-left: 0; /* Убираем отступ на мобильных устройствах */
+	}
+}

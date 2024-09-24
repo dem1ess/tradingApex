@@ -1,0 +1,45 @@
+.slick-track{
+    display: flex !important;
+}
+
+.slick-slide{
+    height: inherit !important;
+}
+
+.slick__pagination--dots{
+  position: relative;
+  .slick-slider-dots{
+    position: relative;
+  }
+}
+
+.slick-dots{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: toRem(4);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  li{
+    button{
+      width: toRem(8);
+      height: toRem(8);
+      position: relative;
+      font-size: 0;
+      background: $grey-80;
+      border-radius: toRem(20);
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+  .slick-active{
+    button{
+      background: $royal-blue-gradient;
+      width: toRem(27);
+      height: toRem(8);
+    }
+  }
+}

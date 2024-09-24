@@ -1,0 +1,423 @@
+//removing arrow on input type number
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+//mini forms forms email address
+.mini-form {
+	position: relative;
+	.mini-form__input {
+		position: relative;
+		padding-right: 10.5rem;
+		&::placeholder {
+			color: $grey-60;
+		}
+		@include media-breakpoint-down(md) {
+			padding: toRem(15.5) toRem(125) toRem(15.5) toRem(24);
+			font-size: toRem(14);
+		}
+	}
+	.mini-form__submit {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0.5rem;
+		margin: auto 0;
+		height: max-content;
+	}
+}
+//forms currency
+.forms-currency {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	border: 1px solid $grey-80;
+	border-radius: 6.25rem;
+	background: $dark-transparent !important;
+	color: $white;
+	width: 100%;
+	transition: all linear 0.2s;
+	&:active,
+	&:focus,
+	&:focus-visible,
+	&:focus-within {
+		border-color: $ultramarine-blue;
+		border-width: 2px;
+	}
+	.forms-group--currency {
+		cursor: pointer;
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding-right: toRem(52);
+		gap: toRem(8);
+		width: toRem(120) !important;
+		.forms-currency__icon-arrow-down {
+			position: absolute;
+			right: toRem(28);
+			top: 0;
+			bottom: 0;
+			margin: auto 0;
+			width: toRem(16);
+			height: toRem(16);
+		}
+		.forms-group__items {
+			display: flex;
+			align-items: center;
+			gap: toRem(8);
+			.fg-items__icon {
+				width: toRem(24);
+				height: toRem(24);
+				@include media-breakpoint-down(md) {
+					width: toRem(20);
+					height: toRem(20);
+				}
+			}
+			.fg-items__value {
+				flex-grow: 1;
+				text-transform: uppercase;
+				transition: all linear 0.2s;
+				font-family: $font-family-base;
+				font-weight: 600;
+				font-size: toRem(18);
+				@include media-breakpoint-down(md) {
+					font-size: toRem(16);
+				}
+			}
+			&:hover {
+				.fg-items__value {
+					color: $blue-link;
+				}
+			}
+		}
+		.forms-group__dropdown {
+			display: none;
+			visibility: hidden;
+			opacity: 0;
+			position: absolute;
+			left: 0;
+			right: toRem(28);
+			margin: 0 auto;
+			top: calc(100% + 16px);
+			z-index: 10;
+			width: max-content;
+			max-height: toRem(
+				280
+			); // Adjust height as needed (7 items * item height + padding/margin)
+			overflow-y: auto; // Enable vertical scrolling
+			border: 1px solid $dark-transparent;
+			background: $darker-grey;
+			border-radius: toRem(8);
+			flex-direction: column;
+			align-items: center;
+			gap: toRem(4);
+			padding: toRem(8) toRem(16);
+			@include media-breakpoint-down(md) {
+				top: calc(100% + 8px);
+			}
+			&.is-open {
+				opacity: 1;
+				visibility: visible;
+				display: flex;
+			}
+		}
+	}
+	.forms-group--value {
+		flex-grow: 1;
+	}
+	.form-control,
+	.form-select {
+		font-size: 1.125rem;
+		border: none !important;
+		background: none !important;
+		padding: 1rem 2rem;
+	}
+	.forms-currency__value {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		padding-right: 0;
+	}
+	.forms-currency__currency {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		padding-left: 0;
+		padding-right: 0;
+
+		width: max-content;
+		line-height: 1.6;
+		font-weight: 600;
+		font-family: $font-family-base;
+		option {
+			background: $dark-transparent !important;
+			color: $white;
+		}
+	}
+	.forms-currency__currency-icon {
+		position: relative;
+		width: auto;
+		height: auto;
+		max-width: toRem(24);
+		max-height: toRem(24);
+	}
+	.forms-currency__line {
+		height: 2rem;
+		width: 1px;
+		background: $grey-80;
+	}
+}
+//forms select
+.forms-select {
+	position: relative;
+	cursor: pointer;
+	.forms-select__arrow-down {
+		position: absolute;
+		right: toRem(32);
+		top: 0;
+		bottom: 0;
+		margin: auto 0;
+		width: toRem(20);
+		height: toRem(20);
+	}
+	.forms-group__items {
+		display: flex;
+		align-items: center;
+		gap: toRem(8);
+		&.selected {
+			padding: toRem(16) toRem(32);
+			border-radius: toRem(100);
+			background: $dark-transparent;
+			border: 1px solid $grey-80;
+		}
+		.fg-items__icon {
+			width: toRem(24);
+			height: toRem(24);
+			@include media-breakpoint-down(md) {
+				width: toRem(20);
+				height: toRem(20);
+			}
+		}
+		.fg-items__value {
+			flex-grow: 1;
+			transition: all linear 0.2s;
+			font-family: $font-family-base;
+			font-weight: 400;
+			font-size: toRem(18);
+			@include media-breakpoint-down(md) {
+				font-size: toRem(16);
+			}
+		}
+	}
+	.forms-group__dropdown {
+		display: none;
+		visibility: hidden;
+		opacity: 0;
+		position: absolute;
+		left: 0;
+		right: toRem(28);
+		margin: 0 auto;
+		top: calc(100% + 16px);
+		z-index: 10;
+		width: 100%;
+		max-height: toRem(
+			280
+		); // Adjust height as needed (7 items * item height + padding/margin)
+		overflow-y: auto; // Enable vertical scrolling
+		border: 1px solid $dark-transparent;
+		background: $darker-grey;
+		border-radius: toRem(8);
+		flex-direction: column;
+		align-items: flex-start;
+		gap: toRem(8);
+		padding: toRem(16) toRem(32);
+		@include media-breakpoint-down(md) {
+			top: calc(100% + 8px);
+		}
+		&.is-open {
+			opacity: 1;
+			visibility: visible;
+			display: flex;
+		}
+		.forms-group__items {
+			&:hover {
+				.fg-items__value {
+					color: $blue-link;
+				}
+			}
+		}
+	}
+}
+//forms search
+.forms-search {
+	position: relative;
+	.forms-search__input {
+		position: relative;
+		padding: 0.5rem 1.5rem;
+		padding-right: 3.75rem;
+	}
+	.forms-search__icon {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto 0;
+		right: 2rem;
+
+		width: auto;
+		height: auto;
+		max-width: 1.25rem;
+		max-height: 1.25rem;
+		z-index: 2;
+	}
+}
+//forms purchase
+.forms-purchase {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	background: $darker-grey !important;
+	color: $white;
+	border-bottom: 1px solid $grey-80;
+	width: 100%;
+	transition: all linear 0.2s;
+	&:active,
+	&:focus,
+	&:focus-visible,
+	&:focus-within {
+		border-color: $ultramarine-blue;
+		border-width: 2px;
+		outline: none;
+		box-shadow: none;
+	}
+	.forms-group--purchase {
+		cursor: pointer;
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding-right: toRem(28);
+		gap: toRem(8);
+		width: toRem(96) !important;
+		.forms-group__items {
+			display: flex;
+			align-items: center;
+			gap: toRem(8);
+			.fg-items__icon {
+				width: toRem(24);
+				height: toRem(24);
+				@include media-breakpoint-down(md) {
+					width: toRem(20);
+					height: toRem(20);
+				}
+			}
+			.fg-items__value {
+				flex-grow: 1;
+				text-transform: uppercase;
+				transition: all linear 0.2s;
+				font-family: $font-family-base;
+				font-weight: 600;
+				font-size: toRem(18);
+				@include media-breakpoint-down(md) {
+					font-size: toRem(16);
+				}
+			}
+			&:hover {
+				.fg-items__value {
+					color: $blue-link;
+				}
+			}
+		}
+		.forms-currency__icon-arrow-down {
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto 0;
+			width: toRem(20);
+			height: toRem(20);
+		}
+		.forms-group__dropdown {
+			display: none;
+			visibility: hidden;
+			opacity: 0;
+			position: absolute;
+			left: 0;
+			right: toRem(8);
+			margin: 0 auto;
+			top: calc(100% + 16px);
+			width: max-content;
+			z-index: 10;
+			max-height: toRem(
+				280
+			); // Adjust height as needed (7 items * item height + padding/margin)
+			overflow-y: auto; // Enable vertical scrolling
+			border: 1px solid $dark-transparent;
+			background: $darker-grey;
+			border-radius: toRem(8);
+			flex-direction: column;
+			align-items: center;
+			gap: toRem(4);
+			padding: toRem(8) toRem(16);
+
+			@include media-breakpoint-down(md) {
+				top: calc(100% + 8px);
+			}
+			&.is-open {
+				opacity: 1;
+				visibility: visible;
+				display: flex;
+			}
+		}
+	}
+	.form-control,
+	.form-select {
+		font-size: 1.125rem;
+		border: none !important;
+		background: none !important;
+		padding: 1rem 2rem;
+	}
+	.forms-purchase__value {
+		padding-right: 0;
+		padding-left: 0;
+		@include media-breakpoint-down(md) {
+			padding: toRem(12) 0;
+			font-size: toRem(12);
+		}
+	}
+	.forms-group--value {
+		flex-grow: 1;
+	}
+	.forms-purchase__purchase {
+		padding-left: 0;
+		padding-right: 0;
+
+		line-height: 1.6;
+		font-weight: 600;
+		font-family: $font-family-base;
+		@include media-breakpoint-down(md) {
+			font-size: toRem(14);
+			padding: toRem(12) 0;
+		}
+		option {
+			background: $dark-transparent !important;
+			color: $white;
+		}
+	}
+	.forms-purchase__purchase-icon {
+		position: relative;
+		width: toRem(24);
+		height: toRem(24);
+		@include media-breakpoint-down(md) {
+			width: toRem(20);
+			height: toRem(20);
+		}
+	}
+	.forms-purchase__line {
+		height: 2rem;
+		width: 1px;
+		background: $grey-80;
+	}
+}

@@ -1,0 +1,104 @@
+// Initialize first
+@import "../init";
+
+// Import files  
+@import "home";
+
+// Exchange v1
+.container {
+
+  &--dashboard--exchange-v1 {
+    margin-bottom: 2.75rem;
+
+    .dashboard__group--exchange-v1 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    
+      .dashboard__group-left {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        @include media-breakpoint-down(xxl) {
+          width: 100%;
+        }
+
+        .standard-card--type-8-v2 {
+          .standard-card__items {
+            flex-wrap: wrap;
+            max-width: 100%;
+
+            .standard-card__item {
+              flex-grow: 1;
+
+              @include media-breakpoint-down(xxl) {
+                justify-content: space-between;
+              }
+            }
+          }
+        }
+
+        .complete-card--type-3 {
+          @include media-breakpoint-down(xxl) {
+            max-width: none;
+          }
+        }
+
+        .table--type-3 {
+          max-width: 1008px;
+          @include media-breakpoint-down(xxl) {
+            max-width: none;
+          }
+
+          .table-container {
+            max-height: 286px;
+
+            .table-content {
+              min-width: auto;
+
+              @include media-breakpoint-down(md) {
+                min-width: 983px;
+              }
+            }
+          }
+        }
+      }
+    
+      .dashboard__group-right {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        @include media-breakpoint-down(xxl) {
+          flex-direction: row;
+          width: 100%; 
+        }
+
+        @include media-breakpoint-down(md) {
+          flex-direction: column;
+        }
+
+        .advance-card--type-2 {
+          min-width: unset;
+          max-width: 320px;
+
+          @include media-breakpoint-down(xxl) {
+            max-width: none;
+            flex: 1 1 0px;
+          }
+        }
+
+        .advance-card--type-1-v2 {
+          min-width: unset;
+          max-width: 320px;
+
+          @include media-breakpoint-down(xxl) {
+            max-width: none;
+            flex: 1 1 0px;
+          }
+        }
+      }
+    }
+  }
+}

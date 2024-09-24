@@ -1,0 +1,89 @@
+// Initialize first
+@import "../init";
+
+// Import files  
+@import "home";
+
+// Market
+.market--v2 {
+  padding-bottom: 2.75rem;
+
+  .container--market-v2 {
+    max-width: -webkit-fill-available;
+    max-width: -moz-available;
+    margin-left: 6rem;
+
+    @include media-breakpoint-down(lg) {
+      margin-left: 0;
+      padding: 0;
+    }
+
+    .container--dashboard {
+      .dashboard__title {
+        display: none;
+        @include media-breakpoint-down(sm) {
+          display: block;
+        }
+      }
+      
+      
+      .market-group {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        overflow: hidden;
+        
+        .market-group-carousel {
+          position: relative;
+  
+          .market-group-cards {
+            display: flex;
+            gap: 1.5rem;
+            overflow: hidden;
+
+            .slick-track {
+              opacity: 1 !important;
+
+              .slick-slide {
+                margin-left: 1.5rem;
+
+                &:first-child {
+                  margin-left: 0;
+                }
+              }
+            }
+  
+            .standard-card {
+              @include media-breakpoint-down(xl-2) {
+                min-width: 300px; 
+              }
+  
+              .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                height: 100%;
+              }
+            }
+          }
+          
+          .slick__pagination {
+            width: 100%;
+            margin-top: 1rem;
+
+            .assets-carousel__arrows {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Sidebar 
+.sidebar {
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+}

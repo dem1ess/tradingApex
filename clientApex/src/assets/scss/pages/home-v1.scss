@@ -1,0 +1,28 @@
+// Initialize first
+@import "../init";
+
+// Import files  
+@import "home";
+
+// Add your style here
+.component{
+  .component__content--dropdown{
+    position: relative;
+    display: flex;
+
+    gap: 2rem;
+    align-items: center;
+  }
+}
+.mini-form-sm__box{
+  max-width: 28.125rem;
+}
+.forms-currency,.forms-select{
+  max-width: 25rem;
+}
+.forms-search{
+  max-width: 12.5rem;
+}
+.forms-purchase__box{
+  max-width: 28rem;
+}

@@ -1,0 +1,16 @@
+// Main style (DO NOT MODIFY BELOW INCLUDE ORDER)
+
+// Initialize first
+//@import 'init';
+
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+
+// Styling for external libraries
+@import 'vendors/index';
+
+// Everything that takes part in laying out the site
+@import 'layouts/index';
+
+// It contains all kind of specific modules like a slider, a loader, a widget, and basically anything along those lines
+@import 'components/index';

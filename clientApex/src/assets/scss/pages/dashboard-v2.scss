@@ -1,0 +1,112 @@
+.container {
+	&--dashboard-v2 {
+		max-width: -webkit-fill-available !important;
+		margin-left: 96px !important;
+		margin-bottom: 4.25rem !important;
+		padding: 0 2.5rem !important;
+
+		@include media-breakpoint-down(lg) {
+			margin-left: 0 !important;
+		}
+
+		.header-navbar-dashboard--v2 {
+			.container--dashboard-nav {
+				padding: 0 !important;
+			}
+		}
+
+		.container--dashboard {
+			padding: 0 !important;
+
+			.dashboard__title {
+				display: none !important;
+				@include media-breakpoint-down(sm) {
+					display: block !important;
+				}
+			}
+		}
+
+		.dashboard__group {
+			display: flex !important;
+			gap: 1.5rem !important;
+			flex-wrap: wrap !important;
+
+			&--outer {
+				.complete-card--type-1-v3 {
+					@include media-breakpoint-down(1480px) {
+						width: 100% !important;
+					}
+					@include media-breakpoint-down(xxl) {
+						max-width: 100% !important;
+
+						.complete-card__wallet {
+							max-width: 100% !important;
+
+							.complete-card__wallet-data {
+								.complete-card__wallet-data__currencies {
+									width: 100% !important;
+
+									.wallet-data__currency {
+										max-width: unset !important;
+										width: 100% !important;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&--middle {
+				flex-direction: column !important;
+				@include media-breakpoint-down(xxl) {
+					width: 100% !important;
+				}
+
+				.complete-card--type-2-v2 {
+					@media only screen and (min-width: 1440px) {
+						max-width: 832px !important;
+					}
+
+					@include media-breakpoint-down(xxl) {
+						width: 100% !important;
+						max-width: none !important;
+					}
+				}
+			}
+
+			&--inner {
+				flex-wrap: nowrap !important;
+				@include media-breakpoint-down(lg) {
+					flex-wrap: wrap !important;
+				}
+
+				.standard-card--type-7 {
+					max-width: none !important;
+
+					@include media-breakpoint-down(lg) {
+						.container {
+							max-width: none !important;
+						}
+					}
+				}
+
+				.standard-card--type-5-v1 {
+					max-width: none !important;
+
+					@include media-breakpoint-down(lg) {
+						.container {
+							max-width: none !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.sidebar {
+	@include media-breakpoint-down(lg) {
+		display: none !important;
+	}
+}

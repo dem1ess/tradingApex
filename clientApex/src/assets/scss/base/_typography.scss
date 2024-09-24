@@ -1,0 +1,122 @@
+
+/////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+/////////////////////////////
+//font display
+.fd-xl {
+  font-size: $font-display-size-xl;
+  line-height: 1.2;
+  margin: 0;
+  font-weight: 500;
+  font-family: $font-family-secondary;
+  &--bold {
+    font-weight: 600;
+  }  
+  @include media-breakpoint-down(sm) {
+    font-size: $font-display-mobile-size-xl;
+  }
+}
+.fd-lg {
+  font-size: $font-display-size-lg;
+  line-height: 1.2;
+  margin: 0;
+  font-weight: 500;
+  font-family: $font-family-secondary;
+  &--bold {
+    font-weight: 600;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: $font-display-mobile-size-lg;
+  }
+}
+.fd-md {
+  font-size: $font-display-size-md;
+  line-height: 1.1;
+  margin: 0;
+  font-weight: 400;
+  font-family: $font-family-secondary;
+  &--bold {
+    font-weight: 600;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: $font-display-mobile-size-md;
+  }
+}
+.fd-sm {
+  font-size: $font-display-size-sm;
+  line-height: 1.1;
+  margin: 0;
+  font-weight: 400;
+  font-family: $font-family-secondary;
+  &--bold {
+    font-weight: 600;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: $font-display-mobile-size-sm;
+  }
+}
+/////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+/////////////////////////////
+//font body
+.fb-lg {
+  font-size: $font-size-lg;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 400;
+  font-family: $font-family-secondary;
+  &--bold {
+    font-weight: 600;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: $font-mobile-size-lg;
+  }
+}
+.fb-regular {
+  font-size: $font-size-base;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 400;
+  font-family: $font-family-secondary;
+  &--bold {
+    font-weight: 600;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: $font-mobile-size-base;
+  }
+}
+.fb-sm {
+  font-size: $font-size-sm;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+  font-family: $font-family-secondary;
+  &--bold {
+    font-weight: 600;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: $font-mobile-size-sm;
+  }
+}
+.fb-xs {
+  font-size: $font-size-xs;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+  font-family: $font-family-secondary;
+  &--bold {
+    font-weight: 600;
+  }
+}
+
+
+//text color
+.text-bullish {
+  color: $green;
+}
+.text-bearish {
+  color: $red;
+}
+.text-green-light{
+  color:$green-light;
+}

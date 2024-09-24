@@ -1,0 +1,21 @@
+<svg width="44" height="45" viewBox="0 0 44 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_2071_12745)">
+<path d="M6.41664 38.5835C7.93831 40.1051 10.395 40.1051 11.9166 38.5835L35.75 14.7501C37.2716 13.2285 37.2716 10.7718 35.75 9.25014C34.2283 7.72847 31.7716 7.72847 30.25 9.25014L6.41664 33.0835C4.89497 34.6051 4.89497 37.0618 6.41664 38.5835Z" stroke="#11CABE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M33.0186 17.4814L27.5186 11.9814" stroke="#11CABE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.5835 5.47317L18.3335 4.6665L17.5268 7.4165L18.3335 10.1665L15.5835 9.35984L12.8335 10.1665L13.6402 7.4165L12.8335 4.6665L15.5835 5.47317Z" stroke="#11CABE" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.25 16.4732L11 15.6665L10.1933 18.4165L11 21.1665L8.25 20.3598L5.5 21.1665L6.30667 18.4165L5.5 15.6665L8.25 16.4732Z" stroke="#11CABE" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M35.75 25.6402L38.5 24.8335L37.6933 27.5835L38.5 30.3335L35.75 29.5268L33 30.3335L33.8067 27.5835L33 24.8335L35.75 25.6402Z" stroke="#11CABE" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path d="M6.41664 38.5835C7.93831 40.1051 10.395 40.1051 11.9166 38.5835L35.75 14.7501C37.2716 13.2285 37.2716 10.7718 35.75 9.25014C34.2283 7.72847 31.7716 7.72847 30.25 9.25014L6.41664 33.0835C4.89497 34.6051 4.89497 37.0618 6.41664 38.5835Z" stroke="#11CABE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M33.0186 17.4814L27.5186 11.9814" stroke="#11CABE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.5835 5.47317L18.3335 4.6665L17.5268 7.4165L18.3335 10.1665L15.5835 9.35984L12.8335 10.1665L13.6402 7.4165L12.8335 4.6665L15.5835 5.47317Z" stroke="#11CABE" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.25 16.4732L11 15.6665L10.1933 18.4165L11 21.1665L8.25 20.3598L5.5 21.1665L6.30667 18.4165L5.5 15.6665L8.25 16.4732Z" stroke="#11CABE" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M35.75 25.6402L38.5 24.8335L37.6933 27.5835L38.5 30.3335L35.75 29.5268L33 30.3335L33.8067 27.5835L33 24.8335L35.75 25.6402Z" stroke="#11CABE" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<filter id="filter0_f_2071_12745" x="-4" y="-3" width="52" height="52" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_2071_12745"/>
+</filter>
+</defs>
+</svg>

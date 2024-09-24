@@ -1,0 +1,36 @@
+.form-check {
+  position: relative;
+
+  &--lg {
+    padding-left: calc(20px + 16px);
+
+    .form-check-input {
+      width: 20px;
+      height: 20px;
+      margin-left: calc((20px + 16px) * -1);
+      border-radius: toRem(2);      
+      border: 1px solid $grey-40;
+      background-color: transparent;
+    }
+  }
+}
+.form-check-label{
+  cursor: pointer;
+  color: $grey-40;
+}
+
+.form-check-input {
+  margin-top: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+
+  &:checked {
+    &[type="radio"] {
+      background-color: $form-check-input-bg;
+      background-size: 125%;
+      background-position: center;
+    }
+  }
+}

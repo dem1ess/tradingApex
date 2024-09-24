@@ -1,0 +1,242 @@
+// Initialize first
+@import "../init";
+
+// Import files  
+@import "home";
+
+.sidebar--documentation{
+  width: toRem(172);
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+    min-height: auto;
+  }
+  .container{
+    padding: toRem(32) toRem(24);
+    @include media-breakpoint-down(lg) {
+      padding: toRem(16);
+    }
+    .sidebar-title{
+      display: none;
+      @include media-breakpoint-down(lg) {
+        display: block;
+        font-size: toRem(25);
+      }
+      @include media-breakpoint-down(md) {
+        display: block;
+        font-size: toRem(22);
+      }
+    }
+    .sidebar-menu{
+      gap: toRem(12);
+      .sidebar-menu__list{
+        &:last-child{
+          margin: unset;
+        }
+        .sidebar-menu__list-name{
+          display: block;
+          text-transform: capitalize;
+          font-weight: 400;
+          color: $grey-60;
+        }
+      }
+    } 
+  } 
+  &.expanded .container{
+    padding: toRem(16);
+  }
+  .sidebar-menu--mobile{
+    padding: 0 !important;
+    gap: 0 !important;
+    .sidebar-menu__list{
+      padding: toRem(16);
+      border-bottom: 1px solid $grey-80;
+      &:first-child{
+        border-top: 1px solid $grey-80;
+      }
+    }
+    .sidebar-button{
+      margin-top: toRem(16);
+      padding: 0 toRem(16);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: stretch;
+      gap: toRem(16);
+      .btn{
+        padding: toRem(8) toRem(16);
+        width: 100%;
+      }
+      .btn--live-preview{
+        background: transparent;
+      }
+    }
+  }
+} 
+
+// Container v2
+.container {
+  &--documentation{
+    max-width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+    max-width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    max-width: stretch;
+    min-height: toRem(1024);
+    margin-left: toRem(172);
+    padding: toRem(40) toRem(40);
+    > .container{ // next container / main container for content
+      padding: 0;
+    }
+    @include media-breakpoint-down(lg) {
+      margin-left: 0;
+    }
+    @include media-breakpoint-down(md) {
+      padding: toRem(24) toRem(16);
+    }
+  }
+}
+
+//exchange
+.documentation{
+  position: relative;
+  .header-nav{
+    display: flex;
+    justify-content: space-between;
+    gap: toRem(32);
+    align-items: center;
+    padding: toRem(32);
+    background: $dark-transparent;
+    min-height: unset;
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+    .heading-button{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: toRem(8);
+      .btn{
+        padding: toRem(8) toRem(16);
+      }
+      .btn--live-preview{
+        background: transparent;
+      }
+    }
+  }
+  .documentation__title{
+    margin-bottom: toRem(32);
+    @include media-breakpoint-down(lg) {
+      margin-bottom: toRem(24);
+    }
+  }
+  .card{
+    position: relative;
+    margin-bottom: toRem(32);
+    padding: toRem(40);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: toRem(32);
+    background: $dark-transparent;
+    border-radius: toRem(12);
+    @include media-breakpoint-down(lg) {
+      margin-bottom: toRem(24);
+      padding: toRem(24);
+      gap: toRem(16);
+    }
+    .card__title{
+      text-align: center;
+    }
+    .card-body{
+      width: 100%;
+      padding: 0 !important;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: toRem(24);
+    }
+    .card-item{
+      width: 100%;
+      overflow-x: hidden;
+    }
+    .card-item__title{
+      margin-bottom: toRem(16);
+    }
+    .card-item__body{
+      width: 100%;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: toRem(8);
+      p{
+        display: inline;
+      }
+      img{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: toRem(800);
+        border-radius: toRem(12);
+        border: 1px solid $grey-40;
+        &.logo-cryptolly{
+          width: auto;
+          max-height: toRem(24);
+          display: inline;
+          max-width: unset;
+          border: none;
+          border-radius: none;
+          position: relative;
+          top: toRem(-3);
+        }
+      }
+      .break{
+        display: block;
+      }
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+    .badge{
+      background: $grey-40;
+      color: $grey-100;
+
+      padding: 0 toRem(4);
+      font-size: $font-size-base;
+      line-height: 1.5;
+      margin: 0;
+      font-weight: 400;
+      font-family: $font-family-secondary;
+      @include media-breakpoint-down(sm) {
+        font-size: $font-mobile-size-base;
+      }
+
+      a{
+        font-weight: 500;
+        color: $darker-grey;
+      }
+    }
+    .card-list{
+      display: flex;
+      flex-direction: column;
+      gap: toRem(4);
+      .card-list__item{
+        list-style: disc;
+      }
+      .card-list__item--2nd{
+        list-style: circle;
+        margin-left: toRem(16);
+      }
+      .card-list__item--3rd{
+        list-style: square;
+        margin-left: toRem(32);
+      }
+    }
+  }
+}
+pre{
+  background: $grey-100;
+  border: 1px solid $grey-40;
+  border-radius: toRem(8);
+  width: 100%;
+  padding: toRem(16);
+}

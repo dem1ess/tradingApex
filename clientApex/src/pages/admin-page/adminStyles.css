@@ -1,0 +1,52 @@
+/* styles.css */
+.app-container.light {
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.app-container.dark {
+	background-color: #333333;
+	color: #ffffff;
+}
+
+/* styles.css */
+:root {
+	--primary-color: #007bff;
+	--secondary-color: #6c757d;
+	--background-light: #ffffff;
+	--background-dark: #343a40;
+	--text-light: #000000;
+	--text-dark: #ffffff;
+}
+
+.app-container.light {
+	background-color: var(--background-light);
+	color: var(--text-light);
+}
+
+.app-container.dark {
+	background-color: var(--background-dark);
+	color: var(--text-dark);
+}
+
+.button-light {
+	background-color: var(--primary-color);
+	color: var(--text-light);
+}
+
+.button-dark {
+	background-color: var(--secondary-color);
+	color: var(--text-dark);
+}
+
+body {
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.container,
+.table,
+.card,
+.form-control,
+.modal-content {
+	transition: background-color 0.3s, color 0.3s;
+}

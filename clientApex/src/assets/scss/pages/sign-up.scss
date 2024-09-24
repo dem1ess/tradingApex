@@ -1,0 +1,152 @@
+// Initialize first
+@import '../init';
+
+// Import files
+@import 'home';
+body {
+}
+.sign-up {
+	background-image: url(../../media/images/sign-in/signin-page-background.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	min-height: toRem(1024);
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	z-index: 1;
+	overflow-x: hidden;
+	@include media-breakpoint-down(md) {
+		min-height: unset;
+	}
+	.sign-up-card {
+		position: relative;
+		margin: auto;
+		display: block;
+		width: 100%;
+		max-width: toRem(560);
+		height: auto;
+		padding: toRem(32);
+
+		display: flex;
+		flex-direction: column;
+		gap: toRem(32);
+		background: $other-grey-3;
+		border-radius: toRem(12);
+		@include media-breakpoint-down(md) {
+			max-width: 100%;
+			margin: 0;
+			border-radius: 0;
+			padding: toRem(24);
+		}
+		@include media-breakpoint-down(sm) {
+			padding: toRem(16);
+		}
+		.sign-up__heading {
+			display: flex;
+			flex-direction: column;
+			gap: toRem(16);
+			align-items: center;
+			justify-content: center;
+			img {
+				width: auto;
+				height: auto;
+				max-width: toRem(140);
+				max-height: toRem(50);
+			}
+		}
+		.sign-up__title {
+			color: $grey-40;
+		}
+		.fb-sm {
+			font-size: toRem(14) !important;
+		}
+		.sign-up__forms {
+			display: flex;
+			flex-direction: column;
+			gap: toRem(24);
+			.forms-name {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				gap: toRem(24);
+				@include media-breakpoint-down(md) {
+					flex-direction: column;
+					align-items: stretch;
+				}
+			}
+			.form-control {
+				font-size: toRem(18);
+				padding: toRem(16) toRem(28);
+				&::placeholder {
+					font-weight: 400;
+					color: $grey-40;
+				}
+			}
+			.forms-group {
+				position: relative;
+				.form-group__password-toggle {
+					position: absolute;
+					display: block;
+					top: 0;
+					bottom: 0;
+					margin: auto 0;
+					right: toRem(28);
+					height: toRem(24);
+					width: toRem(24);
+					background-image: url(../../media/images/icons/eye.svg);
+					background-repeat: no-repeat;
+					background-size: 100% 100%;
+					background-position: center;
+					z-index: 2;
+					cursor: pointer;
+				}
+			}
+			.tnc {
+				display: flex;
+				flex-direction: row;
+				align-items: flex-start;
+				gap: toRem(16);
+				.form-check-input {
+					top: toRem(4);
+					transform: unset;
+				}
+				.form-check-label {
+					max-width: toRem(246);
+					@include media-breakpoint-down(md) {
+						max-width: unset;
+					}
+				}
+			}
+			.btn-submit {
+				margin-top: toRem(8);
+				padding: toRem(16) !important;
+				font-size: toRem(16) !important;
+				width: 100%;
+				@include media-breakpoint-down(md) {
+					margin-top: toRem(50);
+				}
+			}
+		}
+		.sign-up-info {
+			display: inline;
+			text-align: center;
+			margin: 0 auto;
+			color: $white;
+			.sign-up-link {
+				color: $white;
+				text-decoration: underline;
+				font-weight: 500;
+				transition: all linear 0.2s;
+				&:hover {
+					color: $royal-blue;
+				}
+			}
+		}
+	}
+}

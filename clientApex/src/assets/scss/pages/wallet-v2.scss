@@ -1,0 +1,71 @@
+// Initialize first
+@import '../init';
+
+// Import files
+@import 'home';
+
+// Wallet v2
+.wallet--v2 {
+	.container--wallet-v2 {
+		max-width: -webkit-fill-available;
+		max-width: -moz-available;
+		margin-left: 6rem;
+
+		@include media-breakpoint-down(lg) {
+			margin-left: 0;
+			padding: 0;
+		}
+
+		.container--dashboard {
+			.dashboard__title {
+				display: none;
+				@include media-breakpoint-down(sm) {
+					display: block;
+				}
+			}
+
+			.wallet-group {
+				flex-direction: column;
+
+				.wallet-group--left {
+					display: flex;
+					flex-direction: row; // Always arrange items in a row
+					gap: toRem(24);
+					max-width: none; // Remove width restrictions
+					overflow-y: hidden;
+					touch-action: pan-x; // Allow horizontal touch gestures
+				}
+
+				.wallet-group--right {
+					flex-direction: row;
+
+					@include media-breakpoint-down(lg) {
+						flex-direction: column;
+					}
+
+					.advance-card--type-3-v1 {
+						height: fit-content;
+
+						@include media-breakpoint-down(lg) {
+							width: 100%;
+							max-width: none;
+						}
+					}
+
+					.table--type-1 {
+						.table-container {
+							max-height: 516px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Sidebar
+.sidebar {
+	@include media-breakpoint-down(lg) {
+		display: none;
+	}
+}

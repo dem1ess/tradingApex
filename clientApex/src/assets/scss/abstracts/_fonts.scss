@@ -1,0 +1,208 @@
+// Для шрифтов Sofia Pro
+@include font-face('Sofia Pro', 'SofiaPro-Black', ('woff', 'woff2'), 900);
+@include font-face(
+	'Sofia Pro',
+	'SofiaPro-BlackItalic',
+	('woff', 'woff2'),
+	900,
+	'italic'
+);
+@include font-face('Sofia Pro', 'SofiaPro-Bold', ('woff', 'woff2'), 700);
+@include font-face(
+	'Sofia Pro',
+	'SofiaPro-BoldItalic',
+	('woff', 'woff2'),
+	700,
+	'italic'
+);
+@include font-face('Sofia Pro', 'SofiaPro-SemiBold', ('woff', 'woff2'), 600);
+@include font-face(
+	'Sofia Pro',
+	'SofiaPro-SemiBoldItalic',
+	('woff', 'woff2'),
+	600,
+	'italic'
+);
+@include font-face('Sofia Pro', 'SofiaPro-Medium', ('woff', 'woff2'), 500);
+@include font-face(
+	'Sofia Pro',
+	'SofiaPro-MediumItalic',
+	('woff', 'woff2'),
+	500,
+	'italic'
+);
+@include font-face('Sofia Pro', 'SofiaPro-Regular', ('woff', 'woff2'));
+@include font-face(
+	'Sofia Pro',
+	'SofiaPro-Italic',
+	('woff', 'woff2'),
+	400,
+	'italic'
+);
+@include font-face('Sofia Pro', 'SofiaPro-Light', ('woff', 'woff2'), 300);
+@include font-face(
+	'Sofia Pro',
+	'SofiaPro-LightItalic',
+	('woff', 'woff2'),
+	300,
+	'italic'
+);
+
+// Для шрифтов Graphik
+@include font-face('Graphik', 'Graphik-Black', ('ttf', 'woff', 'woff2'), 900);
+@include font-face(
+	'Graphik',
+	'Graphik-BlackItalic',
+	('ttf', 'woff', 'woff2'),
+	900,
+	'italic'
+);
+@include font-face('Graphik', 'Graphik-Bold', ('ttf', 'woff', 'woff2'), 700);
+@include font-face(
+	'Graphik',
+	'Graphik-BoldItalic',
+	('ttf', 'woff', 'woff2'),
+	700,
+	'italic'
+);
+@include font-face(
+	'Graphik',
+	'Graphik-Semibold',
+	('ttf', 'woff', 'woff2'),
+	600
+);
+@include font-face(
+	'Graphik',
+	'Graphik-SemiboldItalic',
+	('ttf', 'woff', 'woff2'),
+	600,
+	'italic'
+);
+@include font-face('Graphik', 'Graphik-Medium', ('ttf', 'woff', 'woff2'), 500);
+@include font-face(
+	'Graphik',
+	'Graphik-MediumItalic',
+	('ttf', 'woff', 'woff2'),
+	500,
+	'italic'
+);
+@include font-face('Graphik', 'Graphik-Regular', ('ttf', 'woff', 'woff2'));
+@include font-face(
+	'Graphik',
+	'Graphik-RegularItalic',
+	('ttf', 'woff', 'woff2'),
+	400,
+	'italic'
+);
+@include font-face('Graphik', 'Graphik-Light', ('ttf', 'woff', 'woff2'), 300);
+@include font-face(
+	'Graphik',
+	'Graphik-LightItalic',
+	('ttf', 'woff', 'woff2'),
+	300,
+	'italic'
+);
+
+// Для шрифтов Inter
+@include font-face('Inter', 'Inter-Black', ('woff', 'woff2'), 900);
+@include font-face(
+	'Inter',
+	'Inter-BlackItalic',
+	('woff', 'woff2'),
+	900,
+	'italic'
+);
+@include font-face('Inter', 'Inter-ExtraBold', ('woff', 'woff2'), 800);
+@include font-face(
+	'Inter',
+	'Inter-ExtraBoldItalic',
+	('woff', 'woff2'),
+	800,
+	'italic'
+);
+@include font-face('Inter', 'Inter-Bold', ('woff', 'woff2'), 700);
+@include font-face(
+	'Inter',
+	'Inter-BoldItalic',
+	('woff', 'woff2'),
+	700,
+	'italic'
+);
+@include font-face('Inter', 'Inter-SemiBold', ('woff', 'woff2'), 600);
+@include font-face(
+	'Inter',
+	'Inter-SemiBoldItalic',
+	('woff', 'woff2'),
+	600,
+	'italic'
+);
+@include font-face('Inter', 'Inter-Medium', ('woff', 'woff2'), 500);
+@include font-face(
+	'Inter',
+	'Inter-MediumItalic',
+	('woff', 'woff2'),
+	500,
+	'italic'
+);
+@include font-face('Inter', 'Inter-Regular', ('woff', 'woff2'));
+@include font-face('Inter', 'Inter-Light', ('woff', 'woff2'), 300);
+@include font-face(
+	'Inter',
+	'Inter-LightItalic',
+	('woff', 'woff2'),
+	300,
+	'italic'
+);
+
+// Для шрифтов Circular Std
+@include font-face(
+	'Circular Std',
+	'CircularStd-Black',
+	('eot', 'ttf', 'woff', 'woff2'),
+	900
+);
+@include font-face(
+	'Circular Std',
+	'CircularStd-BlackItalic',
+	('eot', 'ttf', 'woff', 'woff2'),
+	900,
+	'italic'
+);
+@include font-face(
+	'Circular Std',
+	'CircularStd-Bold',
+	('eot', 'ttf', 'woff', 'woff2'),
+	700
+);
+@include font-face(
+	'Circular Std',
+	'CircularStd-BoldItalic',
+	('eot', 'ttf', 'woff', 'woff2'),
+	700,
+	'italic'
+);
+@include font-face(
+	'Circular Std',
+	'CircularStd-Medium',
+	('eot', 'ttf', 'woff', 'woff2'),
+	500
+);
+@include font-face(
+	'Circular Std',
+	'CircularStd-MediumItalic',
+	('eot', 'ttf', 'woff', 'woff2'),
+	500,
+	'italic'
+);
+@include font-face(
+	'Circular Std',
+	'CircularStd-Book',
+	('eot', 'ttf', 'woff', 'woff2')
+);
+@include font-face(
+	'Circular Std',
+	'CircularStd-BookItalic',
+	('eot', 'ttf', 'woff', 'woff2'),
+	400,
+	'italic'
+);

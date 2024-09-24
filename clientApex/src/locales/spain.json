@@ -1,0 +1,117 @@
+{
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "questions": [
+      {
+        "que": "¿Qué es el comercio al contado?",
+        "ans": "El comercio al contado implica la compra y venta de activos para entrega inmediata. Le permite comerciar con varios instrumentos financieros, como acciones, divisas y criptomonedas, a precios de mercado actuales."
+      },
+      {
+        "que": "¿Qué es el comercio de futuros?",
+        "ans": "El comercio de futuros implica la compra y venta de contratos que obligan al comprador a comprar y al vendedor a vender un activo en una fecha y precio futuros predeterminados. Permite el uso de apalancamiento y se puede utilizar para cobertura o especulación."
+      },
+      {
+        "que": "¿Qué criptomonedas puedo comerciar?",
+        "ans": "Puede comerciar una amplia gama de criptomonedas, incluidas Bitcoin, Ethereum, Ripple, Litecoin y muchas otras. Nuestra plataforma admite varios pares de criptomonedas para el comercio."
+      },
+      {
+        "que": "¿Puedo comerciar acciones en su plataforma?",
+        "ans": "Sí, nuestra plataforma le permite comerciar con una variedad de acciones de los principales mercados globales. Puede acceder tanto al comercio al contado como al comercio de futuros de acciones."
+      },
+      {
+        "que": "¿Qué es el comercio automatizado?",
+        "ans": "El comercio automatizado, también conocido como bots de comercio, utiliza algoritmos para ejecutar operaciones en función de criterios predefinidos. Estos bots pueden manejar operaciones por usted, asegurando que no pierda oportunidades debido a las fluctuaciones del mercado."
+      },
+      {
+        "que": "¿Qué tan seguras son mis datos comerciales?",
+        "ans": "Implementamos medidas de seguridad estándar de la industria para proteger sus datos comerciales. Esto incluye cifrado, servidores seguros y auditorías de seguridad regulares para garantizar que su información esté segura."
+      },
+      {
+        "que": "¿Hay tarifas para comerciar?",
+        "ans": "Sí, nuestra plataforma cobra tarifas comerciales que varían según el tipo de operación y el activo. La información detallada sobre nuestra estructura de tarifas está disponible en nuestro sitio web o puede obtenerse contactando a nuestro equipo de soporte."
+      },
+      {
+        "que": "¿Puedo usar apalancamiento para comerciar?",
+        "ans": "Sí, ofrecemos apalancamiento tanto para el comercio de futuros como para el comercio de margen. La cantidad de apalancamiento disponible depende del activo y las condiciones del mercado. Siempre asegúrese de comprender los riesgos asociados con el comercio de margen."
+      },
+      {
+        "que": "¿Cómo puedo obtener soporte si tengo preguntas?",
+        "ans": "Si tiene alguna pregunta o necesita soporte, puede ponerse en contacto con nuestro equipo de servicio al cliente por correo electrónico, chat en vivo o teléfono. Estamos aquí para ayudarlo con cualquier problema o consulta que pueda tener."
+      }
+    ]
+  },
+
+  "header_links": {
+    "home_link": "Home",
+    "buy_link": "Buy Crypto",
+    "contact_us": "Contact us",
+    "trading": "Trading",
+    "Trading_link": {
+      "spot_trading": "SPOT TRADING",
+      "futures": "Futuros",
+      "bots": "Bots de negociación"
+    }
+  },
+  "real-time": "Datos de mercado en tiempo real",
+
+  "hero_section": {
+    "title": "Opere e invierta con confianza",
+    "description": "Elija activos con gran liquidez para materializar rápidamente su estrategia",
+    "trade_button": "Conectarse",
+    "register_button": "Registro",
+    "login_button": "Inicio de sesión"
+  },
+  "stats_value": {
+    "daily_trading": "Volumen diario de negociación",
+    "managment": "Fondos gestionado",
+    "interest": "Interés abierto",
+    "traders": "Usuarios activos"
+  },
+  "proof_why": "Торговля как она должна быть",
+  "proof_section": {
+    "title": "",
+    "spot_trading": {
+      "title": "SPOT TRADE",
+      "description": "Obtenga acceso instantáneo a los activos más relevantes y líquidos negociando en el mercado en tiempo real."
+    },
+    "futures": {
+      "title": "Futuros",
+      "description": "Analice y negocie: dispone de las principales clases de futuros. Aproveche el servicio de apalancamiento y maximice sus oportunidades ampliando su cartera de inversiones sin realizar grandes inversiones financieras."
+    },
+    "bots": {
+      "title": "Bots de negociación",
+      "description": "Deje que los bots gestionen sus operaciones mientras usted disfruta de la vida."
+    },
+    "markets": {
+      "title": "Una variedad de mercados",
+      "description": "Una variedad de mercados de activos - su camino hacia el éxito financiero"
+    },
+    "storage": {
+      "title": "Auto almacenamiento",
+      "description": "Usted y sólo usted guarda sus fondos mientras comercia"
+    },
+    "comission": {
+      "title": "Comisiones bajas",
+      "description": "Opere a lo grande con una atractiva estructura de comisiones."
+    }
+  },
+  "wallet_section": {
+    "title": "",
+    "description": "",
+    "sub": ""
+  },
+
+  "footer": {
+    "company_title": "Empresa",
+    "company_links": ["Inicio", "Quiénes somos", "Servicios", "Carrera"],
+    "rights": "Todos los derechos reservados.",
+    "newsletter": "Boletín",
+    "enterEmail": "Introduzca su dirección de correo electrónico"
+  },
+  "terms": {
+    "privacy": "Política de Privacidad",
+    "terms": "Términos y condiciones"
+  },
+  "phone": " +441111111111",
+  "mail": "apex@services.com"
+}

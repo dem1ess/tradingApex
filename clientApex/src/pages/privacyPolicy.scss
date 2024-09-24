@@ -1,0 +1,21 @@
+/* styles.css */
+body {
+	background-color: #121212;
+	color: #e0e0e0;
+	font-family: 'Arial', sans-serif;
+}
+
+.privacy-policy h1,
+.privacy-policy h2 {
+	color: #ffffff;
+}
+
+.privacy-policy a {
+	color: #1e90ff;
+	text-decoration: underline;
+}
+
+.privacy-policy ul {
+	list-style-type: disc;
+	padding-left: 20px;
+}

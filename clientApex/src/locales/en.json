@@ -1,0 +1,117 @@
+{
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "que": "What is spot trading?",
+        "ans": "Spot trading involves buying and selling assets for immediate delivery. It allows you to trade various financial instruments like stocks, forex, and cryptocurrencies at current market prices."
+      },
+      {
+        "que": "What is futures trading?",
+        "ans": "Futures trading involves buying and selling contracts that obligate the buyer to purchase, and the seller to sell, an asset at a predetermined future date and price. It allows for leverage and can be used for hedging or speculation."
+      },
+      {
+        "que": "What cryptocurrencies can I trade?",
+        "ans": "You can trade a wide range of cryptocurrencies including Bitcoin, Ethereum, Ripple, Litecoin, and many others. Our platform supports various crypto pairs for trading."
+      },
+      {
+        "que": "Can I trade stocks on your platform?",
+        "ans": "Yes, our platform allows you to trade a variety of stocks from major global markets. You can access both spot and futures stock trading."
+      },
+      {
+        "que": "What is automated trading?",
+        "ans": "Automated trading, also known as trading bots, uses algorithms to execute trades based on predefined criteria. These bots can handle trades for you, ensuring that you don’t miss out on opportunities due to market fluctuations."
+      },
+      {
+        "que": "How secure is my trading data?",
+        "ans": "We implement industry-standard security measures to protect your trading data. This includes encryption, secure servers, and regular security audits to ensure your information is safe."
+      },
+      {
+        "que": "Are there any fees for trading?",
+        "ans": "Yes, our platform charges trading fees which vary based on the type of trade and asset. Detailed information on our fee structure is available on our website or can be obtained by contacting our support team."
+      },
+      {
+        "que": "Can I use leverage for trading?",
+        "ans": "Yes, we offer leverage for both futures and margin trading. The amount of leverage available depends on the asset and market conditions. Always ensure you understand the risks associated with trading on margin."
+      },
+      {
+        "que": "How can I get support if I have questions?",
+        "ans": "If you have any questions or need support, you can contact our customer service team via email, live chat, or phone. We are here to help you with any issues or queries you may have."
+      }
+    ]
+  },
+
+  "header_links": {
+    "home_link": "Home",
+    "buy_link": "Buy Crypto",
+    "contact_us": "Cohntact us",
+    "trading": "Trading",
+    "Trading_link": {
+      "spot_trading": "Spot trading",
+      "futures": "Futures",
+      "bots": "Trading Bots"
+    }
+  },
+  "real-time": "Real time market data",
+
+  "hero_section": {
+    "title": "Trade and invest with confidence",
+    "description": "Choose assets with high liquidity to quickly implement your strategy",
+    "trade_button": "Trade Now",
+    "register_button": "Register",
+    "login_button": "Login"
+  },
+  "stats_value": {
+    "daily_trading": "Daily trading volume",
+    "managment": "Funds under management",
+    "interest": "Open interest",
+    "traders": "Active trader"
+  },
+  "proof_why": "Trading as it should be",
+  "proof_section": {
+    "title": "",
+    "spot_trading": {
+      "title": "SPOT TRADING",
+      "description": "Get instant access to the most relevant and liquid assets by trading the market in real time."
+    },
+    "futures": {
+      "title": "Futures trading",
+      "description": "Analyze and trade - all major classes of futures are available. Take advantage of the leverage service and increase your opportunities by expanding your investment portfolio without making large financial investments."
+    },
+    "bots": {
+      "title": "Trading Bots",
+      "description": "Let the bots handle the trading, while you enjoy life."
+    },
+    "markets": {
+      "title": "A variety of markets",
+      "description": "A variety of asset markets - your path to financial success."
+    },
+    "storage": {
+      "title": "Self-storage",
+      "description": "You and only you keep your funds while trading."
+    },
+    "comission": {
+      "title": "Low commissions",
+      "description": "A variety of asset markets - your path to financial success."
+    }
+  },
+  "wallet_section": {
+    "title": "",
+    "description": "",
+    "sub": ""
+  },
+
+  "footer": {
+    "company_title": "Company",
+    "company_links": ["Home", "About Us", "Services", "Careers"],
+    "rights": "All rights reserved.",
+    "newsletter": "Newsletter",
+    "enterEmail": "Enter your email"
+  },
+  "terms": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms and Conditions"
+  }, 
+  "phone": " +441111111111",
+  "mail": "apex@services.com"
+}

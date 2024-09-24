@@ -1,0 +1,227 @@
+.sidebar {
+  min-height: 100vh;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $grey-100;
+  z-index: 2000;
+
+  @include media-breakpoint-down(lg) {
+    height: unset;
+    position: relative;
+  }
+
+  &.expanded {
+    .container {
+      min-width: 270px;
+      padding: 2rem;
+      align-items: flex-start;
+
+      @include media-breakpoint-down(lg) {
+        min-width: 100%;
+        margin: 0;
+        padding: 1rem 2rem;
+        align-items: center;
+      }
+
+      .sidebar-menu {
+        .sidebar-menu__list {
+          .sidebar-menu__list-name {
+            display: block;
+          }
+
+          &::after {
+            content: unset;
+          }
+        }
+      }
+    }
+
+    .sidebar-menu--mobile {
+      height: 100vh;
+      padding: 1rem 2rem;
+      
+      @include media-breakpoint-down(lg) {
+        display: flex;
+      }
+    }
+  }
+
+  .container {
+    min-width: 96px;
+    height: 100%;
+    margin: 0;
+    padding: 2rem 1rem;
+    transition: all ease-in-out 0.4s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media-breakpoint-down(lg) {
+      min-width: 100%;
+      height: unset;
+      margin: auto;
+      padding: 1rem 2rem;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .sidebar-logo {
+      margin-bottom: 4.5rem;
+      cursor: pointer;
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 0;
+      }
+
+      .sidebar-logo__image {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 2.5rem;
+        max-height: 2.5rem;
+
+        @include media-breakpoint-down(lg) {
+          max-width: 2rem;
+          max-height: 2rem;
+        }
+      }
+    }
+
+    .sidebar-menu {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 3.75rem;
+
+      @include media-breakpoint-down(lg) {
+        flex-direction: row;
+      }
+
+      .sidebar-menu__hamburger-menu {
+        display: none;
+        cursor: pointer;
+
+        @include media-breakpoint-down(lg) {
+          display: block;
+        }
+      }
+
+      .sidebar-menu__list {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        @include media-breakpoint-down(lg) {
+          display: none;
+        }
+
+        .sidebar-menu__list-icon {
+          display: block;
+          transition: all linear 0.2s;
+        }
+
+        .sidebar-menu__list-name {
+          display: none;
+          font-weight: 600;
+          color: $grey-60;
+          transition: all linear 0.2s;
+        }
+
+        &::after {
+          position: absolute;
+          content: "";
+          width: 0.5rem;
+          height: 0.5rem;
+          background-color: $white;
+          border-radius: 50%;
+          right: -0.75rem;
+          visibility: hidden;
+        }
+
+        &.active {
+          .sidebar-menu__list-icon {
+            filter: brightness(0) invert(1);
+          }
+
+          .sidebar-menu__list-name {
+            color: $white;
+            font-weight: 600;
+          }
+
+          &::after {
+            visibility: visible;
+          }
+        }
+
+        &:hover {
+          .sidebar-menu__list-icon {
+            filter: brightness(0) invert(1);
+          }
+
+          .sidebar-menu__list-name {
+            color: $white;
+            font-weight: 600;
+          }
+        }
+
+        &:last-child {
+          margin-top: auto;
+        }
+      }
+    }
+  }
+
+  .sidebar-menu--mobile {
+    padding: 0;
+    flex-direction: column;
+    gap: 2rem;
+    height: 0;
+    display: none;
+    transition: all ease-in-out 0.4s;
+
+    .sidebar-menu__list {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .sidebar-menu__list-icon {
+        display: block;
+        transition: all linear 0.2s;
+      }
+
+      .sidebar-menu__list-name {
+        font-weight: 600;
+        color: $grey-60;
+        transition: all linear 0.2s;
+      }
+
+      &:hover,
+      &:active,
+      &:focus,
+      &:focus-visible,
+      &:focus-within {
+        .sidebar-menu__list-icon {
+          filter: brightness(0) invert(1);
+        }
+
+        .sidebar-menu__list-name {
+          color: $white;
+        }
+      }
+
+      &.active {
+        .sidebar-menu__list-icon {
+          filter: brightness(0) invert(1);
+        }
+
+        .sidebar-menu__list-name {
+          color: $white;
+        }
+      }
+    }
+  }
+}

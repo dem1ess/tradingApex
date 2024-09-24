@@ -1,0 +1,29 @@
+.form-control {
+  padding: 1.34375rem 2rem;
+  
+  font-family: $font-family-secondary;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  
+  background: $dark-transparent !important;
+  border: 1px solid $grey-80;
+  border-radius: 6.25rem;
+  color: $white;
+  &::placeholder {
+    font-weight: $font-weight-base;
+    color: $purple-placeholder;
+  }
+  &:focus {
+    color: $white;
+    border-width: 2px;
+  }
+}
+.form-control-sm{
+  font-size: 0.875rem;
+  padding: 1.25rem 1.5rem;
+}
+.form-control-lg{
+  font-size: 1.125rem;
+  padding: 1.6875rem 2rem;
+}

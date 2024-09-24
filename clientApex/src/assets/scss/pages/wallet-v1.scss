@@ -1,0 +1,56 @@
+// Initialize first
+@import '../init';
+
+// Import files
+@import 'home';
+
+// Wallet
+.wallet {
+	position: relative;
+	padding-bottom: toRem(44);
+
+	.wallet-group {
+		position: relative;
+		display: flex;
+		flex-direction: row; // Сохраняем flex-direction: row всегда
+		gap: toRem(24);
+		padding-bottom: toRem(24);
+		// Удаляем медиа-запрос, чтобы flex-direction: column не применялся
+
+		.wallet-group--left {
+			display: flex;
+			flex-direction: row; // Располагаем элементы по горизонтали
+			gap: toRem(24);
+			max-width: none; // Убираем ограничение по ширине
+			overflow-x: auto; // Включаем горизонтальную прокрутку
+			overflow-y: hidden; // Отключаем вертикальную прокрутку
+			touch-action: pan-x; // Разрешаем горизонтальные жесты на сенсорных экранах
+			scroll-snap-type: x mandatory; // Применяем скролл-снап для улучшения UX
+
+			.standard-card {
+				flex: 0 0 auto; // Не позволяем карточкам уменьшаться
+				min-width: toRem(304); // Минимальная ширина карточек
+				margin-right: toRem(16); // Отступы между карточками
+				scroll-snap-align: start; // Карточки будут прилипать к началу при прокрутке
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+
+
+		.wallet-group--right {
+			display: flex;
+			flex-direction: column;
+			gap: toRem(24);
+			width: 100%;
+			overflow: hidden;
+		}
+	}
+}
+
+.advance-card.advance-card--type-3-v3 {
+	width: 100%;
+	max-width: 100%;
+}

@@ -1,0 +1,7 @@
+.badge {
+  &--lg {
+    padding: toRem(8) toRem(16);
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+  }
+}

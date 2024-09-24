@@ -1,0 +1,175 @@
+// Initialize first
+@import "../init";
+
+// Import files  
+@import "home";
+
+//dashboard
+.dashboard{
+  position: relative;
+  padding-bottom: toRem(68);
+  @include media-breakpoint-down(md) {     
+    column-gap: toRem(28);
+  }
+
+  //dashboard group flex
+  .dashboard__group{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: toRem(24);
+    column-gap: toRem(24);
+    @include media-breakpoint-down(xxl) {     
+      column-gap: toRem(16);
+    }
+  }  
+  .complete-card--type-1-v1{
+    order: 1;
+    width: auto;
+    flex-grow: 1;
+    @include media-breakpoint-down(xl) {     
+      width: 100%;
+      flex-basis: 100%;
+      max-width: unset;
+    }
+  }
+  .standard-card--type-5-v2{
+    order: 2;
+    flex-grow: 1;
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: toRem(435);
+    height: inherit;
+    max-height: toRem(270);
+    min-height: toRem(268);
+    background: $grey-100;
+    border-radius: toRem(12);
+    @include media-breakpoint-down(xl-2) {
+      max-width: toRem(375);
+    }
+    @include media-breakpoint-down(xl) {     
+      order: 3;
+      flex-grow: 1;
+      max-width: 50%;
+      max-height: toRem(480);
+      .standard-card__content{
+        max-height: toRem(360);
+      }
+    }
+    @include media-breakpoint-down(lg) {     
+      order: 3;
+      flex-grow: 1;
+      max-width: 100%;
+    }
+    @include media-breakpoint-down(md) {     
+      max-height: toRem(350);
+      .standard-card__content{
+        max-height: toRem(260);
+      }
+    }
+  }
+  .advance-card--type-1-v1{
+    order: 3;
+    max-width: toRem(343);
+    @include media-breakpoint-down(xl-2) {
+      flex-grow: 1;
+    }
+    @include media-breakpoint-down(xl) {     
+      order: 4;
+      flex-grow: 1;
+      max-width: 50%;
+    }
+    @include media-breakpoint-down(lg) {     
+      max-width: unset;
+    }
+  }
+  .complete-card--type-2-v1{
+    order: 4;
+    flex-grow: 1;
+    @include media-breakpoint-down(xl-2) {
+      max-width: calc( 100% - toRem(16) - toRem(343) ); // 343px is the width
+    }    
+    @include media-breakpoint-down(xl) {     
+      width: 100%;
+      flex-basis: 100%;
+      order: 2;
+      max-width: unset;
+    }
+  }
+  .assets{
+    position: relative;
+    order: 5;
+    flex-basis: 100%;
+    flex-grow: 1;
+    max-width: 100%;
+    overflow: hidden;
+    
+    /* the slides */
+    .slick-slide {
+      margin: 0 toRem(12);
+      @include media-breakpoint-down(xl-2){      
+        margin: 0 toRem(8);
+      }
+    }
+    /* the parent */
+    .slick-list {
+      // padding:0 16% 0 0 !important;
+      margin: 0  toRem(-12);
+      @include media-breakpoint-down(xl-2){      
+        margin: 0 toRem(-8);
+      }
+    }
+    /*Hide Slick Arrow*/
+    .slick-arrow{
+      &.slick-disabled { 
+        display: none !important;
+      }
+    }
+
+    //slick pagination arrow and dots
+    .slick__pagination{  
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include media-breakpoint-down(md){      
+        position: relative;
+        margin-top: toRem(16);
+      }
+      .assets-carousel__arrows{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        
+        @include media-breakpoint-down(md){      
+          display: none;
+        }
+        .slick-arrow{
+          width: toRem(38);
+          height: toRem(38);
+          img{
+            width: toRem(38);
+            height: toRem(38);
+          }
+        }
+        .assets-carousel__prev{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+          left: 1rem;
+        }
+        .assets-carousel__next{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+          right: 1rem;
+        }
+      }
+    }
+  }
+}

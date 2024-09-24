@@ -1,0 +1,12 @@
+// Main initialization (DO NOT MODIFY BELOW INCLUDE ORDER)
+
+// To avoid any potential issue with character encoding
+
+// Variables, functions, mixins, and other configurations
+@import 'abstracts/index';
+
+// Bootstrap configuration
+@import 'bootstrap/scss/bootstrap-reboot';
+
+// Reset file, some typographic rules, and some standard styles for commonly used HTML elements
+@import 'base/index';

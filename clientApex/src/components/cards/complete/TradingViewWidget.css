@@ -1,0 +1,91 @@
+.tradingview-widget {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	background-color: #1e1f25;
+	padding: 20px;
+	border-radius: 8px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.symbol-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.symbol-search {
+	background-color: transparent;
+	color: #fff;
+	border: 1px solid #444;
+	padding: 5px 10px;
+	border-radius: 4px;
+}
+
+.symbol-list {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	background-color: #333;
+	border: 1px solid #444;
+	z-index: 10;
+	border-radius: 4px;
+}
+
+.symbol-item {
+	padding: 8px;
+	cursor: pointer;
+	color: #fff;
+}
+
+.symbol-item:hover {
+	background-color: #555;
+}
+
+.pair {
+	margin-left: 20px;
+	font-size: 16px;
+	color: #fff;
+}
+
+.price-info {
+	padding-left: 20px;
+	display: flex;
+	justify-content: space-between; /* Распределяет элементы с промежутками между ними */
+	gap: 10px; /* Расстояние между элементами */
+}
+
+.range-selector {
+	display: flex;
+	gap: 10px;
+}
+
+/* Скрываем блок с ценовой информацией на мобильных экранах */
+@media (max-width: 768px) {
+	.price-info {
+		display: none;
+	}
+}
+
+.range-button {
+	padding: 5px 10px;
+	background-color: #444;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
+
+.range-button.active {
+	background-color: #11cabe;
+}
+
+.chart-container {
+	margin-top: 20px;
+	height: 300px;
+}

@@ -1,0 +1,21 @@
+.navbar{
+  .nav{
+    border: 1px dashed $purple-nav;
+    border-radius: 0.3125rem;
+    padding: 1rem;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    .nav-link{
+      background: transparent;
+      border: none;
+      color: $grey-60;
+      padding: .5rem 1rem;
+      &.active{
+        border: none;
+        color: $white;
+      }
+    }
+  }
+}

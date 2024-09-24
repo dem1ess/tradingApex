@@ -1,0 +1,74 @@
+// Initialize first
+@import "../init";
+
+// Import files  
+@import "home";
+
+//Market
+.market{
+  position: relative;
+  padding-bottom: toRem(44);
+  
+  .market-group{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: toRem(24);
+    overflow: hidden;
+    @include media-breakpoint-down(xl) {
+      flex-direction: column;
+    }
+    @include media-breakpoint-down(md) {
+      gap: toRem(16);
+    }
+
+    .market-update{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: toRem(24);
+      max-width: toRem(320);
+      @include media-breakpoint-down(xl) {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 100%;
+        max-width: 100%;
+      }
+      @include media-breakpoint-down(md) {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        width: 100%;
+        max-width: 100%;
+        gap: toRem(16);
+      }
+      .standard-card{
+        max-width: toRem(320);
+        @include media-breakpoint-down(xl) {
+          min-width: 100%;
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+    }
+    .market-update__heading{
+      display: flex;
+      flex-direction: column;
+      gap: toRem(8);
+      @include media-breakpoint-down(xl) {
+        grid-column: 1/-1;
+      }
+    }
+    .market-update__subtitle{
+      color: $grey-40;
+    }
+
+    .market-table{
+      max-width: toRem(1008);
+      overflow: hidden;
+      @include media-breakpoint-down(xl) {
+        max-width: 100%;
+      }
+    }
+  }
+}

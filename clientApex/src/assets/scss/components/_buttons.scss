@@ -1,0 +1,104 @@
+.btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 1rem 2rem;
+  transition: none;
+  border-radius: 6.25rem;
+
+  
+  font-family: $font-family-base;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.6;
+  @include media-breakpoint-down(sm) {
+    font-size: 0.875rem;
+    padding: .5rem 1rem;
+  }
+  img{
+    width: auto;
+    height: auto;
+    max-width: 1.25rem;
+    max-height: 1.25rem;
+  }
+}
+.btn-primary{
+  background: $royal-blue-gradient;
+  color: $white;
+  border: 1px solid $royal-blue-gradient;
+  &:hover{
+    background: $royal-blue-gradient-hover;
+  }
+}
+.btn-secondary{
+  border:1px solid $white !important;
+}
+.btn-lg{
+  padding: 1.125rem 2rem;
+  font-size: 1.125rem;
+}
+.btn-sm{
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+}
+.dropdown-toggle{
+  &::after{
+    display: none;
+  }
+}
+.dropdown-menu{
+  background: $darker-grey;
+  border: 1px solid $white;
+  li{
+    .dropdown-item{
+      color: $white;
+      &:hover{
+        background: $dark-transparent;
+      }
+    }
+  }
+}
+.btn-download-app{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: toRem(16) toRem(32);
+  gap: toRem(24);
+
+  width: max-content;
+
+  border: 1px solid $white;
+  border-radius: toRem(100);
+  transition: all linear .2s;
+  &:hover{
+    border: 2px solid $white !important;
+  }
+  img{
+    width: toRem(32);
+    height: toRem(32);
+  }
+  .btn-download-app__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: $white;
+    .btn-download-app__subtitle{
+      font-family: $font-family-inter;
+      font-style: normal;
+      font-weight: 400;
+      font-size: toRem(12);
+      line-height: 1.5;
+    }
+    .btn-download-app__title{
+      font-family: $font-family-circularStd;
+      font-style: normal;
+      font-weight: 500;
+      font-size: toRem(16);
+      line-height: 1.2;
+    }
+  }
+}

@@ -1,0 +1,148 @@
+<nav
+	class="navbar navbar-expand-lg header-navbar header-navbar-dashboard--v1"
+	data-aos="fade-down"
+>
+	<div class="container container--dashboard-nav">
+		<button
+			class="navbar-toggler ml-auto"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<img src="../assets/media/images/icons/menu.svg" alt="MENU" />
+		</button>
+		<a class="navbar-brand" href="#">
+			<img
+				class="navbar-brand__text"
+				src="../assets/media/images/icons/logo-text.svg"
+				alt="Cryptolly"
+			/>
+			<h4 class="navbar-brand__text--mobile">{{nav-title}}</h4>
+		</a>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<div class="navbar-collapse__content">
+				<ul class="navbar-nav me-auto">
+					<li class="nav-item">
+						<a
+							class="nav-link{{#ifEquals current 'dashboard'}} active{{/ifEquals}}"
+							href="dashboard-v1.html"
+							>Dashboard</a
+						>
+					</li>
+					<li class="nav-item">
+						<a
+							class="nav-link{{#ifEquals current 'exchange'}} active{{/ifEquals}}"
+							href="exchange-v1.html"
+							>Exchange</a
+						>
+					</li>
+					<li class="nav-item">
+						<a
+							class="nav-link{{#ifEquals current 'wallet'}} active{{/ifEquals}}"
+							href="wallet-v1.html"
+							>Wallet</a
+						>
+					</li>
+					<li class="nav-item">
+						<a
+							class="nav-link{{#ifEquals current 'market'}} active{{/ifEquals}}"
+							href="market-v1.html"
+							>Market</a
+						>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="navbar-right">
+			<div class="navbar-search">
+				<input type="text" class="navbar-search__input" placeholder="Search" />
+				<img
+					src="../assets/media/images/icons/search.svg"
+					alt="search-icon"
+					class="navbar-search__image"
+				/>
+			</div>
+			<div class="navbar-notifications">
+				<img
+					src="../assets/media/images/icons/notifications.svg"
+					alt="notifications-icon"
+					class="navbar-notifications__image"
+				/>
+				<div class="navbar-notifications__dropdown">
+					<p class="fb-regular fb-regular--bold notifications__title">
+						Notifications
+					</p>
+					<div class="notifications__box">
+						<div class="notifications__item">
+							<img
+								src="../assets/media/images/notification-image.png"
+								alt=""
+								class="notifications__item-image"
+							/>
+							<div class="notifications__item-message">
+								<p class="notifications__item-sender">Keanu Reeves</p>
+								<p class="notifications__item-text">promoted your post</p>
+							</div>
+						</div>
+						<div class="notifications__item">
+							<img
+								src="../assets/media/images/notification-image.png"
+								alt=""
+								class="notifications__item-image"
+							/>
+							<div class="notifications__item-message">
+								<p class="notifications__item-sender">Keanu Reeves</p>
+								<p class="notifications__item-text">promoted your post</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="navbar-profile-menu">
+				<p class="navbar-profile-menu__text">John Doe</p>
+				<img
+					src="../assets/media/images/profile-photo.png"
+					alt="profile-photo-icon"
+					class="navbar-profile-menu__image"
+				/>
+				<img
+					src="../assets/media/images/icons/arrow-down.svg"
+					alt="arrow-down-icon"
+					class="navbar-profile-menu__arrow"
+				/>
+				<div class="navbar-profile-menu__dropdown">
+					<div class="navbar-profile-menu__dropdown-item">
+						<a class="fb-regular dropdown-item__link" href="profile-v1.html"
+							>Account</a
+						>
+					</div>
+					<div class="navbar-profile-menu__dropdown-item">
+						<a class="fb-regular dropdown-item__link" href="sign-in-v1.html"
+							>Log Out</a
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="navbar-search-popup">
+			<input
+				type="text"
+				class="navbar-search-popup__input js-navbar-search-popup__input"
+				placeholder="Search"
+			/>
+			<img
+				src="../assets/media/images/icons/search.svg"
+				alt="search-icon"
+				class="navbar-search-popup__image"
+			/>
+			<img
+				src="../assets/media/images/icons/plus-icon.svg"
+				alt="cancel-icon"
+				class="navbar-search-popup__image--cancel js-navbar-search-popup__image--cancel"
+			/>
+		</div>
+	</div>
+</nav>

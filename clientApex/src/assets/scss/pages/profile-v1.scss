@@ -1,0 +1,461 @@
+// Initialize first
+@import '../init';
+
+// Import files
+@import 'home';
+
+.profile-v2 {
+	.container--profile-v2 {
+		max-width: -webkit-fill-available;
+		max-width: -moz-available;
+		margin-left: 6rem;
+
+		@include media-breakpoint-down(lg) {
+			margin-left: 0;
+			padding: 0;
+		}
+
+		.container--dashboard--profile {
+			padding: 0;
+
+			@include media-breakpoint-down(lg) {
+				padding: 0 2rem;
+			}
+
+			@include media-breakpoint-down(sm) {
+				padding: 0 1rem;
+			}
+		}
+	}
+
+	.profile__title {
+		display: none;
+
+		@include media-breakpoint-down(md) {
+			display: block;
+		}
+	}
+
+	.profile__container {
+		margin-top: 0;
+		padding: 0;
+		background: none;
+
+		@include media-breakpoint-down(md) {
+			margin-top: 1.5rem;
+		}
+
+		.profile__content {
+			gap: 2.5rem;
+			@include media-breakpoint-down(lg) {
+				gap: 1.5rem;
+			}
+
+			.profile__content-wrapper {
+				display: grid;
+				grid-template-columns: 12.8125rem 1fr;
+				gap: 1.5rem;
+
+				@include media-breakpoint-down(lg) {
+					grid-template-columns: 1fr;
+				}
+
+				.profile__content-title {
+					.content-title-1 {
+						@include media-breakpoint-down(md) {
+							font-size: 1.25rem;
+						}
+					}
+
+					.content-title-2 {
+						margin-top: 0.25rem;
+						color: $grey-40;
+					}
+				}
+
+				.profile__contact-info,
+				.profile__personal-info,
+				.profile__delete-account {
+					padding: 1.5rem;
+					background: $grey-100;
+					border-radius: 0.75rem;
+
+					gap: 2.3125rem;
+				}
+
+				.profile__contact-info {
+					@include media-breakpoint-down(lg) {
+						gap: 1.5rem;
+					}
+					.photo-profile__group {
+						.photo-profile__group-photo {
+							width: toRem(64);
+							height: toRem(64);
+							border-radius: 100%;
+						}
+					}
+					.contact-info__crypto {
+						justify-content: space-between;
+						gap: 0;
+					}
+				}
+
+				.profile__delete-account {
+					@include media-breakpoint-down(lg) {
+						gap: 1rem;
+					}
+				}
+			}
+
+			.profile__save-btn {
+				padding: 1.125rem 2rem;
+			}
+		}
+	}
+}
+.profile {
+	.profile__title {
+		display: flex;
+		align-items: flex-start;
+		gap: 1.5rem;
+
+		@include media-breakpoint-down(md) {
+			gap: 1rem;
+		}
+
+		.profile__title-icon-wrapper {
+			background: $royal-blue-gradient;
+			padding: 0.75rem;
+			border-radius: 50%;
+			display: flex;
+
+			.profile__title-icon {
+				width: auto;
+				height: auto;
+				max-width: 1.5rem;
+				max-height: 1.5rem;
+			}
+		}
+
+		.profile__title-text {
+			.profile__title-text-1 {
+				margin-bottom: 0.75rem;
+
+				@include media-breakpoint-down(md) {
+					margin-bottom: 0.25rem;
+				}
+			}
+			.profile__title-text-2 {
+				color: $grey-40;
+			}
+		}
+	}
+
+	.profile__container {
+		margin: 2.5rem 0;
+		background: $grey-100;
+		border-radius: 0.75rem;
+		padding: 2.5rem;
+
+		@include media-breakpoint-down(md) {
+			padding: 0;
+			background: none;
+			margin: 1.5rem 0;
+		}
+
+		.profile__content {
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+
+			.profile__contact-info {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5rem;
+
+				@include media-breakpoint-down(md) {
+					padding: 1.5rem;
+					background: $grey-100;
+					border-radius: 0.75rem;
+				}
+
+				.contact-info__photo-profile {
+					display: flex;
+					gap: 2rem;
+
+					@include media-breakpoint-down(md) {
+						flex-direction: column;
+						gap: 1.5rem;
+					}
+
+					.photo-profile__group,
+					.photo-profile__cta {
+						display: flex;
+						align-items: center;
+						gap: 1rem;
+
+						.photo-profile__group-photo {
+							width: toRem(64);
+							height: toRem(64);
+							border-radius: 100%;
+						}
+
+						.photo-profile__group-text {
+							.photo-profile__group-text-email {
+								margin-top: 0.25rem;
+								color: $grey-60;
+							}
+						}
+
+						.btn-secondary {
+							background: none;
+
+							&:hover {
+								background: $darker-grey;
+							}
+						}
+					}
+
+					.photo-profile__cta {
+						@include media-breakpoint-down(xs-1) {
+							flex-direction: column;
+							align-items: stretch;
+						}
+					}
+				}
+
+				.contact-info__name {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					gap: 1.5rem;
+
+					@include media-breakpoint-down(md) {
+						grid-template-columns: 1fr;
+						gap: 1rem;
+					}
+
+					.contact-info__name-form {
+						.contact-info__name-form-text {
+							margin-bottom: 1rem;
+						}
+
+						.contact-info__name-form-input {
+							input {
+								padding: 1rem 1.75rem;
+
+								&::placeholder {
+									color: $grey-40;
+								}
+							}
+						}
+					}
+				}
+
+				.contact-info__crypto {
+					display: flex;
+					align-items: center;
+					gap: 3.5rem;
+
+					@include media-breakpoint-down(md) {
+						justify-content: space-between;
+						gap: 0;
+					}
+
+					.contact-info__crypto-group {
+						display: flex;
+						align-items: center;
+						gap: 0.5rem;
+
+						.contact-info__crypto-group-coins {
+							display: flex;
+							.contact-info__crypto-group-coin {
+								&:first-child {
+									transform: translateX(0.9rem);
+								}
+								&:nth-child(2) {
+									transform: translateX(0.6rem);
+								}
+								&:nth-child(3) {
+									transform: translateX(0.3rem);
+								}
+								&:last-child {
+									z-index: 1;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.profile__personal-info {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1.5rem;
+
+				@include media-breakpoint-down(md) {
+					padding: 1.5rem;
+					background: $grey-100;
+					border-radius: 0.75rem;
+					grid-template-columns: 1fr;
+				}
+
+				.personal-info__name-form {
+					.personal-info__name-form-text {
+						margin-bottom: 1rem;
+					}
+
+					.personal-info__name-form-input {
+						input {
+							padding: 1rem 1.75rem;
+
+							&::placeholder {
+								color: $grey-40;
+							}
+						}
+					}
+
+					&--date,
+					&--country {
+						grid-column: 1 / -1;
+					}
+
+					&--date {
+						.personal-info__name-form-input {
+							position: relative;
+							.personal-info__name-form-input-icon {
+								position: absolute;
+								top: 50%;
+								right: 1.75rem;
+								transform: translateY(-50%);
+							}
+						}
+					}
+
+					&--country {
+						.fg-items__value {
+							font-size: 1rem !important;
+							font-family: 'Graphik', sans-serif;
+							color: $grey-40;
+						}
+					}
+				}
+			}
+
+			.profile__delete-account {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				@include media-breakpoint-down(md) {
+					padding: 1.5rem;
+					background: $grey-100;
+					border-radius: 0.75rem;
+					flex-direction: column;
+					align-items: stretch;
+					gap: 1rem;
+				}
+
+				.delete-account__group {
+					.delete-account__group-title {
+						margin-bottom: 0.5rem;
+					}
+					.delete-account__group-desc {
+						color: $grey-40;
+						max-width: 520px;
+						width: 100%;
+
+						@include media-breakpoint-down(md) {
+							max-width: none;
+						}
+					}
+				}
+
+				.delete-account__btn {
+					background: $red;
+					border-color: $red;
+
+					&:hover {
+						background: $other-red;
+						border-color: $other-red;
+					}
+				}
+			}
+
+			.profile__save-btn {
+				margin-left: auto;
+				padding: 1.125rem 4.5rem;
+
+				@include media-breakpoint-down(md) {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
+
+// Datepicker
+.datepicker {
+	padding: 1rem;
+	font-family: $font-family-secondary;
+	background: $grey-100;
+	border: 1px solid $white;
+	border-radius: 0.75rem;
+
+	.datepicker-days,
+	.datepicker-months,
+	.datepicker-years,
+	.datepicker-decades,
+	.datepicker-centuries {
+		.table-condensed {
+			.datepicker-switch,
+			.dow {
+				font-weight: 600;
+			}
+
+			.prev,
+			.datepicker-switch,
+			.next,
+			.old,
+			.day,
+			.month,
+			.year,
+			.decade,
+			.century {
+				&:hover,
+				&:active,
+				&:focus,
+				&:focus-within,
+				&:focus-visible {
+					background: $darker-grey;
+				}
+			}
+
+			.today,
+			.focused {
+				background: $grey-80;
+				color: $white;
+				&:hover,
+				&:active,
+				&:focus,
+				&:focus-within,
+				&:focus-visible {
+					background: $grey-60;
+					color: $white;
+				}
+			}
+
+			.active {
+				background: $grey-60;
+				color: $white;
+				&:hover,
+				&:active,
+				&:focus,
+				&:focus-within,
+				&:focus-visible {
+					background: $grey-80;
+					color: $white;
+				}
+			}
+		}
+	}
+}

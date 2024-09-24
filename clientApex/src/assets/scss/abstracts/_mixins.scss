@@ -1,0 +1,121 @@
+@mixin font-face(
+	$font-family-name,
+	$file-name,
+	$formats: (),
+	$font-weight: 400,
+	$font-style: normal
+) {
+	$src-values: ();
+
+	// Проходим по каждому указанному формату
+	@each $format in $formats {
+		// Используем абсолютный путь от корня проекта
+		$path: '/assets/media/fonts/#{$file-name}.#{$format}';
+
+		@if $format == 'eot' {
+			$src-values: append($src-values, "url('#{$path}')", comma);
+			$src-values: append(
+				$src-values,
+				"url('#{$path}?#iefix') format('embedded-opentype')",
+				comma
+			);
+		} @else if $format == 'woff2' {
+			$src-values: append(
+				$src-values,
+				"url('#{$path}') format('woff2')",
+				comma
+			);
+		} @else if $format == 'woff' {
+			$src-values: append($src-values, "url('#{$path}') format('woff')", comma);
+		} @else if $format == 'ttf' {
+			$src-values: append(
+				$src-values,
+				"url('#{$path}') format('truetype')",
+				comma
+			);
+		} @else if $format == 'svg' {
+			$src-values: append(
+				$src-values,
+				"url('#{$path}?#webfont') format('svg')",
+				comma
+			);
+		}
+	}
+
+	// Если есть значения для src, то создаем @font-face
+	@if length($src-values) > 0 {
+		@font-face {
+			font-family: '#{$font-family-name}';
+			src: #{$src-values};
+			font-weight: $font-weight;
+			font-style: $font-style;
+		}
+	} @else {
+		@warn "No valid font formats provided for #{$file-name}.";
+	}
+}
+
+// Keyframe animations with prefixes
+// So you don't need to add multeple keyframes manually
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+// Text shortener
+// It performs truncation on any text that overflows its containing element and adds an ellipsis (…) to the end
+@mixin text-shorten($line: 1) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $line;
+}
+
+@mixin heading-size(
+	$font-size,
+	$mobile-font-size,
+	$line-height,
+	$mobile-line-height
+) {
+	font-size: $font-size;
+	line-height: $line-height;
+
+	@include media-breakpoint-down(sm) {
+		font-size: $mobile-font-size;
+		line-height: $mobile-line-height;
+	}
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+	@if $breakpoint == sm {
+		@media (max-width: 540px) {
+			@content;
+		}
+	} @else if $breakpoint == md {
+		@media (max-width: 720px) {
+			@content;
+		}
+	} @else if $breakpoint == lg {
+		@media (max-width: 960px) {
+			@content;
+		}
+	} @else if $breakpoint == xl {
+		@media (max-width: 1140px) {
+			@content;
+		}
+	} @else if $breakpoint == xxl {
+		@media (max-width: 1240px) {
+			@content;
+		}
+	}
+}

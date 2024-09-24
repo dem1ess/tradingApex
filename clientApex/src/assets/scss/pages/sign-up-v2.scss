@@ -1,0 +1,217 @@
+// Initialize first
+@import "../init";
+
+// Import files  
+@import "home";
+body{
+  overflow-x: hidden;
+}
+.sign-up--v2{
+  position: relative;
+  min-height: 100vh;
+  height: auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+  overflow-x: hidden;
+  overflow-y: visible;
+  @include media-breakpoint-down(md) {      
+    min-height: unset;
+    height: 100%;
+  }
+  .sign-up-card{
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: toRem(720);
+    height: auto;
+    padding: toRem(76) toRem(120) toRem(56);
+
+    display: flex;
+    flex-direction: column;
+    gap: toRem(32);
+    background: $darker-grey;
+    @include media-breakpoint-down(xl-2) {
+      padding: toRem(56) toRem(80);
+    }
+    @include media-breakpoint-down(xl) {
+      padding: toRem(56) toRem(32);
+    }
+    @include media-breakpoint-down(lg) {
+      padding: toRem(56) toRem(24);
+    }
+    @include media-breakpoint-down(md) {
+      max-width: 100%;
+      margin: 0;
+      border-radius: 0;
+      padding: toRem(24);
+    }
+    @include media-breakpoint-down(sm) {
+      padding: toRem(16);
+    }
+    .sign-up__heading{
+      display: flex;
+      flex-direction: column;
+      gap: toRem(16);
+      img{
+        width: auto;
+        height: auto;
+        max-width: toRem(140);
+        max-height: toRem(50);
+      }
+    }
+    .sign-up__title{
+      color: $grey-40;
+    }
+    .fb-sm{
+      font-size: toRem(14) !important;
+    }
+    .sign-up__forms{
+      display: flex;
+      flex-direction: column;
+      gap: toRem(24);
+      .form-control{
+        font-size: toRem(18);
+        padding: toRem(16) toRem(28);
+        &::placeholder {
+          font-weight: 400;
+          color: $grey-40;
+        }
+      }
+      .forms-group{
+        position: relative;
+        .form-group__password-toggle{
+          position: absolute;
+          display: block;
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+          right: toRem(28);
+          height: toRem(24);
+          width: toRem(24);
+          background-image: url(../../media/images/icons/eye.svg);
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          background-position: center;
+          z-index: 2;
+          cursor: pointer;
+        }
+      }
+      .tnc{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: toRem(16);
+        .form-check-input{
+          top: toRem(4);
+          transform: unset;
+        }
+        .form-check-label{
+          max-width: toRem(246);
+          @include media-breakpoint-down(md) {
+            max-width: unset;
+          }
+        }
+      }
+      .btn-submit{
+        margin-top: toRem(8);
+        padding: toRem(16) !important;
+        font-size: toRem(16) !important;
+        width: 100%;
+        @include media-breakpoint-down(md) {
+          margin-top: toRem(50);
+        }
+      }
+    }
+    .sign-up-info{
+      display:inline;
+      text-align: center;
+      margin: 0 auto;
+      color: $white;
+      .sign-up-link{
+        color: $white;
+        text-decoration: underline;
+        font-weight: 500;
+        transition: all linear .2s;
+        &:hover{
+          color: $royal-blue;
+        }
+      }
+    }
+  }
+  .sign-up-banner{
+    position: relative;
+    background-image: url(../../media/images/sign-in/signin-v2-page-background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+    flex-grow: 1;
+    width: 100%;
+    height: inherit;
+    padding-left: toRem(80);
+    padding-top: toRem(80);
+    @include media-breakpoint-down(xl-2) {
+      padding-left: toRem(56);
+      padding-top: toRem(56);
+    }
+    @include media-breakpoint-down(xl) {
+      padding-left: toRem(32);
+      padding-top: toRem(56);
+    }
+    @include media-breakpoint-down(lg) {
+      padding-left: toRem(24);
+      padding-top: toRem(56);
+    }
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+    .sign-up-banner__title{
+      color: $white;
+      margin-bottom: toRem(16);
+      max-width: toRem(490);
+      margin-right: toRem(80);
+      @include media-breakpoint-down(xl-2) {
+        margin-right: toRem(56);
+      }
+      @include media-breakpoint-down(xl) {
+        margin-right: toRem(32);
+      }
+      @include media-breakpoint-down(lg) {
+        margin-right: toRem(24);
+      }
+    }
+    .sign-up-banner__subtitle{
+      color: $grey-20;
+      max-width: toRem(496);
+      margin-right: toRem(80);
+      @include media-breakpoint-down(xl-2) {
+        margin-right: toRem(56);
+      }
+      @include media-breakpoint-down(xl) {
+        margin-right: toRem(32);
+      }
+      @include media-breakpoint-down(lg) {
+        margin-right: toRem(24);
+      }
+    }
+    .sign-up-banner__illustration{
+      position: absolute;
+      display: block;
+      top: toRem(265);
+      left: toRem(80);
+      width: toRem(1034.44);
+      @include media-breakpoint-down(xl-2) {
+        left: toRem(56);
+      }
+      @include media-breakpoint-down(xl) {
+        left: toRem(32);
+      }
+      @include media-breakpoint-down(lg) {
+        left: toRem(24);
+      }
+    }
+  }
+}
